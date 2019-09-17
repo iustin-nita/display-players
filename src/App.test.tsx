@@ -1,9 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from "react";
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+import Enzyme, { shallow } from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
+
+import App from "./App";
+
+Enzyme.configure({ adapter: new Adapter() });
+
+it("renders properly", () => {
+  const wrapper = shallow(<App />);
+  // expect(wrapper.text()).toEqual("Hello CodeSandbox!");
 });
