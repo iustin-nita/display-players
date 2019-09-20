@@ -1,4 +1,4 @@
-type Player = {
+export type PlayerType = {
   firstname: string;
   lastname: string;
   shortname: string;
@@ -19,15 +19,15 @@ type Player = {
 };
 
 export type State = {
-  data: Player[];
+  data: PlayerType[];
   isLoading: boolean;
   isError: boolean | null;
 };
 
 export type Actions =
-  | { type: "FETCH_INIT" }
-  | { type: "FETCH_ERROR" }
+  | { type: 'FETCH_INIT' }
+  | { type: 'FETCH_ERROR' }
   | {
-      type: "FETCH_SUCCESS";
-      payload: Player[];
+      type: 'FETCH_SUCCESS';
+      payload: PlayerType[];
     };
