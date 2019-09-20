@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App snapshot renders 1`] = `
+<div>
+  <h1
+    className="ui center aligned header"
+    style={
+      Object {
+        "margin": "3em 0",
+      }
+    }
+  >
+    Eurosport
+  </h1>
+  <div
+    className="ui container"
+  >
+    <div
+      className="ui divided items"
+    />
+  </div>
+</div>
+`;
+
+exports[`Player snapshot renders 1`] = `
+<div
+  className="item"
+>
+  <div
+    className="image"
+  >
+    <img
+      src="https://i.eurosport.com/_iss_/person/pp_clubteam/large/325225.jpg"
+    />
+  </div>
+  <div
+    className="content"
+  >
+    <a
+      className="header"
+    >
+      Stan Wawrinka
+    </a>
+    <div
+      className="meta"
+    >
+      <span
+        className="item-meta"
+      >
+        <img
+          aria-label="country"
+          className="ui mini avatar circular image"
+          src="https://i.eurosport.com/_iss_/geo/country/flag/large/2213.png"
+        />
+        <span
+          className="item-meta-label"
+        >
+          SUI
+        </span>
+      </span>
+    </div>
+    <div
+      className="meta"
+    >
+      <span
+        className="item-meta"
+      >
+        <i
+          aria-label="rank"
+          className="chart line icon"
+          onClick={[Function]}
+        />
+        <span
+          className="item-meta-label"
+        >
+          Rank: 
+          <strong>
+            21
+          </strong>
+           -
+           
+          <span
+            className="item-meta-label"
+          >
+            1784
+             Points
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      className="description"
+    >
+      A description for 
+      Stan Wawrinka
+       which may flow for several lines and give context to the content.
+    </div>
+    <div
+      className="extra"
+    >
+      <span>
+        <i
+          aria-label="male"
+          className="male fitted icon"
+          onClick={[Function]}
+        />
+         Male
+      </span>
+      <span>
+        <i
+          aria-hidden="true"
+          className="weight icon"
+          onClick={[Function]}
+        />
+        81 kg
+      </span>
+      <span>
+        <i
+          aria-hidden="true"
+          className="resize vertical icon"
+          onClick={[Function]}
+        />
+        183
+         cm
+      </span>
+    </div>
+    <div
+      className="extra"
+    >
+      <span>
+        Wins: 
+        <strong>
+          3
+        </strong>
+         Loses:
+         
+        <strong>
+          2
+        </strong>
+      </span>
+    </div>
+  </div>
+</div>
+`;

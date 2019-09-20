@@ -2,10 +2,8 @@ import React, { useReducer, useEffect } from 'react';
 import axios from 'axios';
 import { Dimmer, Loader, Header, Item, Container } from 'semantic-ui-react';
 import Player from './Player';
-import CardExampleCard from './Card';
-import './App.css';
 import { State, Actions, PlayerType } from './types';
-import { setFlag, sanitizeWeight, sanitizeLastGames } from './helpers';
+import { sanitizeLastGames } from './helpers';
 
 export const API =
   'https://eurosportdigital.github.io/eurosport-web-developer-recruitment/headtohead.json';
@@ -13,11 +11,6 @@ export const API =
 export const dataFetchReducer = (state: State, action: Actions): State => {
   switch (action.type) {
     case 'FETCH_INIT':
-      console.log('FETCH_INIT', {
-        ...state,
-        isLoading: true,
-        isError: false,
-      });
       return {
         ...state,
         isLoading: true,
@@ -56,10 +49,8 @@ export const App: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_INIT' });
-      console.log('fetchinit');
       try {
         const result = await axios(API);
-        console.log('result', result.data.players);
         setTimeout(() => {
           dispatch({ type: 'FETCH_SUCCESS', payload: result.data.players });
         }, 2000);
@@ -83,7 +74,9 @@ export const App: React.FC = () => {
 
       <Container>
         {isError && (
-          <h1>Something went wrong ... Try to disable your ADBlock</h1>
+          <h1 className="error-message">
+            Something went wrong ... Try to disable your ADBlock
+          </h1>
         )}
         {isLoading ? (
           <Dimmer active>
@@ -97,7 +90,6 @@ export const App: React.FC = () => {
             })}
           </Item.Group>
         )}
-        <CardExampleCard />
       </Container>
     </div>
   );

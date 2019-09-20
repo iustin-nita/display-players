@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Icon, Button, Image, Item, Label } from 'semantic-ui-react';
+import { Icon, Image, Item } from 'semantic-ui-react';
 import { sanitizeWeight } from './helpers';
 
 import { PlayerType } from './types';
@@ -14,27 +14,27 @@ export const Player = ({ player, lastGames }: PlayerProps) => {
     <Item>
       <Item.Image src={player.picture} />
       <Item.Content>
-        <Item.Header as="a">
+        <Item.Header as='a'>
           {`${player.firstname} ${player.lastname}`}
         </Item.Header>
         <Item.Meta>
-          <span className="item-meta">
+          <span className='item-meta'>
             <Image
               avatar
               circular
-              size="mini"
-              aria-label="country"
+              size='mini'
+              aria-label='country'
               src={player.country.picture}
             />
-            <span className="item-meta-label">{player.country.code}</span>
+            <span className='item-meta-label'>{player.country.code}</span>
           </span>
         </Item.Meta>
         <Item.Meta>
-          <span className="item-meta">
-            <Icon aria-label="rank" name="chart line" />
-            <span className="item-meta-label">
+          <span className='item-meta'>
+            <Icon aria-label='rank' name='chart line' />
+            <span className='item-meta-label'>
               Rank: <strong>{player.data.rank}</strong> -{' '}
-              <span className="item-meta-label">
+              <span className='item-meta-label'>
                 {player.data.points} Points
               </span>
             </span>
@@ -47,11 +47,11 @@ export const Player = ({ player, lastGames }: PlayerProps) => {
         <Item.Extra>
           {player.sex === 'M' ? (
             <span>
-              <Icon name="male" fitted aria-label="male" /> Male
+              <Icon name='male' fitted aria-label='male' /> Male
             </span>
           ) : (
             <span>
-              <Icon name="female" fitted aria-label="female" /> Female
+              <Icon name='female' fitted aria-label='female' /> Female
             </span>
           )}
           {/* <span>
@@ -59,11 +59,11 @@ export const Player = ({ player, lastGames }: PlayerProps) => {
               {player.country.code}
             </span> */}
           <span>
-            <Icon name="weight" />
+            <Icon name='weight' />
             {sanitizeWeight(player.data.weight)}
           </span>
           <span>
-            <Icon name="resize vertical" />
+            <Icon name='resize vertical' />
             {player.data.height} cm
           </span>
         </Item.Extra>
